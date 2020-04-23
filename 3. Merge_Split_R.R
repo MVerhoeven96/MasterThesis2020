@@ -1,6 +1,6 @@
 ## Load data -------------------------------------------------------------------
-phone <- read.csv("Cleaned_datasets/phone_constructed.csv", stringsAsFactors = FALSE)
-mood <- read.csv("Cleaned_datasets/mood_constructed.csv", stringsAsFactors = FALSE)
+phone <- read.csv("phone_constructed.csv", stringsAsFactors = FALSE)
+mood <- read.csv("mood_constructed.csv", stringsAsFactors = FALSE)
 
 ## Merge all variables ---------------------------------------------------------
 final <- merge(phone, mood, by = c("date", "user_id", "day_part"))
