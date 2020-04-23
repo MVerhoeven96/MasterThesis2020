@@ -2,8 +2,7 @@
 # coding: utf-8
 
 # Master thesis
-# 
-# 
+#  
 # Maartje Verhoeven | ANR: 706805 | SNR: u1273860 
 # 
 # 
