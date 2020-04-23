@@ -14,11 +14,11 @@ library(chron)
 setWD()
 
 ## Load data -------------------------------------------------------------------
-mood_complete_dataset <- read.csv("master_student_phone_use_data/mood_sampling_data.csv",
+mood_complete_dataset <- read.csv("mood_sampling_data.csv",
                                   stringsAsFactors = FALSE)
-app_complete_dataset <- read.csv("master_student_phone_use_data/app_categories.csv",
+app_complete_dataset <- read.csv("mapp_categories.csv",
                                  stringsAsFactors = FALSE)
-phone_complete_dataset <- read.csv("master_student_phone_use_data/phone_use_data.csv",
+phone_complete_dataset <- read.csv("phone_use_data.csv",
                                    stringsAsFactors = FALSE)
 
 ## merge dataframes -------------------------------------------------------------------
