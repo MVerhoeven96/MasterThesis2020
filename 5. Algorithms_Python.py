@@ -24,9 +24,6 @@ print(sk.__version__)
 
 
 #packages
-import numpy as np
-import pandas as pd
-import sklearn as sk
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
@@ -45,30 +42,6 @@ from sklearn.svm import SVC
 phone_mood = pd.read_csv ('final.csv', index_col = 0)
 phone_mood = pd.DataFrame(phone_mood)
 phone_mood = phone_mood[phone_mood["mood"].notnull()]
-
-
-# In[12]:
-
-
-#from collections import Counter
-
-#print(Counter(phone_mood.mood))
-
-#total = 0
-
-#for value in phone_mood.mood:
-#    total += 1
-    
-#print(total)
-#print(value)
-
-
-# In[13]:
-
-
-#Majority baseline:
-#2537/5292 = 0.479403
-
 
 # In[3]:
 
@@ -100,23 +73,6 @@ print(Counter(y_train))
 
 print("counts in y_val")
 print(Counter(y_val))
-
-
-# In[4]:
-
-
-#majority baseline y_train
-1780/3704 #0.480562
-
-
-# In[5]:
-
-
-#majority baseline y_val
-757/1588 #0.476700
-
-
-# In[6]:
 
 
 #Gridsearch RandomForests
@@ -245,21 +201,6 @@ print(Counter(y_train))
 print("counts in y_val")
 print(Counter(y_val))
 
-
-# In[4]:
-
-
-#majority baseline y_train
-1778/3704 #0.480022
-
-
-# In[5]:
-
-
-#majority baseline y_train
-759/1588 #0.47796
-
-
 # In[7]:
 
 
@@ -321,11 +262,6 @@ def plot_confusion_matrix(cm, classes,
 # Compute confusion matrix
 cnf_matrix = confusion_matrix(y_val, svm_search_predictions)
 np.set_printoptions(precision=2)
-
-# Plot normalized confusion matrix
-#plt.figure(figsize = (8, 8))
-#plot_confusion_matrix(cnf_matrix, classes = class_names, normalize=True,
- #                     title='Normalized confusion matrix')
 
 # Plot non-normalized confusion matrix
 plt.figure(figsize = (8, 8))
